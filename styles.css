@@ -1,0 +1,255 @@
+:root {
+  --bg: #000000;
+  --bg-soft: #0a0a0d;
+  --panel: #0e0e13;
+  --text: #f8f8ff;
+  --muted: #b8bbcf;
+  --accent: #31d2ff;
+  --accent-2: #845bff;
+  --stroke: rgba(255, 255, 255, 0.11);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at top right, #13131b 0%, var(--bg) 40%), var(--bg);
+  color: var(--text);
+}
+
+.bg-noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(circle at 10% 20%, rgba(49, 210, 255, 0.15), transparent 30%),
+    radial-gradient(circle at 85% 0%, rgba(132, 91, 255, 0.18), transparent 26%);
+}
+
+.wrap {
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+}
+
+.logo {
+  font-weight: 900;
+  letter-spacing: 0.4px;
+}
+
+.pill-link {
+  color: var(--text);
+  border: 1px solid var(--stroke);
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.hero {
+  padding: 2.4rem 0 2rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+}
+
+h1 {
+  margin: 0.65rem 0 0;
+  font-size: clamp(1.9rem, 6vw, 3.8rem);
+  line-height: 1.08;
+  max-width: 16ch;
+}
+
+h1 span {
+  background: linear-gradient(95deg, #fff, var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 62ch;
+  margin: 1rem 0 0;
+  line-height: 1.6;
+}
+
+.hero-actions,
+.contact-actions {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 0.86rem 1rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #041017;
+}
+
+.btn.secondary {
+  color: var(--text);
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.hero-badges {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.hero-badges span {
+  font-size: 0.82rem;
+  border: 1px solid var(--stroke);
+  padding: 0.38rem 0.62rem;
+  border-radius: 999px;
+  color: #d4def5;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.plans {
+  padding: 1.1rem 0;
+}
+
+.plans h2 {
+  margin: 0 0 1rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.9rem;
+}
+
+.card {
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  padding: 1rem;
+  background: linear-gradient(180deg, #111119 0%, #0a0a0f 100%);
+}
+
+.featured {
+  border-color: rgba(49, 210, 255, 0.75);
+  box-shadow: 0 10px 28px rgba(49, 210, 255, 0.22);
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 0.2rem;
+  color: var(--accent);
+  background: rgba(49, 210, 255, 0.16);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.73rem;
+}
+
+.card h3 {
+  margin: 0.35rem 0 0;
+}
+
+.price {
+  font-size: 2rem;
+  margin: 0.5rem 0 0;
+  font-weight: 800;
+}
+
+.old-price {
+  margin: 0.2rem 0 0.95rem;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0.7rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #051018;
+  font-weight: 700;
+}
+
+.features {
+  margin: 1.6rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.features > div,
+.contact-box {
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+  background: var(--bg-soft);
+  padding: 1rem;
+}
+
+.features p,
+.contact-box p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.contact-box {
+  margin-bottom: 1.5rem;
+}
+
+.contact-box h3 {
+  margin: 0.1rem 0;
+}
+
+.site-footer {
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 0 2rem;
+}
+
+.site-footer a {
+  color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    padding-top: 0.9rem;
+  }
+
+  .hero {
+    padding-top: 1.2rem;
+  }
+
+  .btn,
+  .card-btn {
+    width: 100%;
+  }
+
+  .contact-actions .btn {
+    text-align: center;
+  }
+}
